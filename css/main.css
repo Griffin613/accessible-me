@@ -1,8 +1,25 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  /* fixed contrast by making the bckground white */
+  background-color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
+}
+
+/* self explanitory but this adds the skip link */
+.skip-link{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+/* makes the skip link hidden until tab is clicked */
+.skip-link:focus{
+  top: 0;
 }
 
 h1,
@@ -39,9 +56,14 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #000;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+
+/* more selection visibility */
+.main-nav ul li a:focus, .main-nav ul li a:hover{
+  outline: 2px solid #000;
 }
 
 form input,
@@ -64,6 +86,13 @@ form button {
   border: 2px solid black;
   padding: 1rem;
   text-transform: uppercase;
+}
+
+/* more interactive buttons */
+form button:focus,
+form button:hover {
+  background: #1e70ff;
+  color: #fff;
 }
 
 .site-footer {
